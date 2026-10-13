@@ -1,39 +1,33 @@
 {
- "name": "@sabaki-js/customer-service",
- "domain": "customer_service",
- "version": "0.1.0",
- "questions": [
-  "action",
-  "category",
-  "churn_risk",
-  "needs_human",
-  "urgency"
- ],
- "keywords": [
-  "text",
-  "role",
-  "customer",
-  "amount",
-  "seats",
-  "tier",
-  "lifetime",
-  "value",
-  "tenure",
-  "thread",
-  "account",
-  "your",
-  "need",
-  "months",
-  "tickets",
-  "orders",
-  "please",
-  "settled",
-  "agent",
-  "plan"
- ],
- "primary": "category",
- "modes": {
-  "nano": "poids TF-IDF embarqu\u00e9s (weights.json)",
-  "mini": "ONNX minilaya via loadMiniClassifier() \u2014 mod\u00e8le: fox3000foxy/sabaki minilaya-onnx/customer_service*"
- }
+	"name": "@sabaki-js/customer-service",
+	"domain": "customer_service",
+	"version": "0.1.0",
+	"questions": ["action", "category", "churn_risk", "needs_human", "urgency"],
+	"keywords": [
+		"text",
+		"role",
+		"customer",
+		"amount",
+		"seats",
+		"tier",
+		"lifetime",
+		"value",
+		"tenure",
+		"thread",
+		"account",
+		"your",
+		"need",
+		"months",
+		"tickets",
+		"orders",
+		"please",
+		"settled",
+		"agent",
+		"plan"
+	],
+	"primary": "category",
+	"modes": {
+		"nano": "poids TF-IDF embarqu\u00e9s (weights.json)",
+		"mini": "ONNX minilaya via loadMiniClassifier() \u2014 mod\u00e8le: fox3000foxy/sabaki minilaya-onnx/customer_service*"
+	}
 }

@@ -1,4 +1,17 @@
-import { predict, type ClassifyOutput, type ModelWeights, type PluginManifest, type SabakiInput, type SabakiPlugin } from "sabaki";
+/**
+ * @sabaki-js/customer-service — sabaki plugin for the `customer_service` domain.
+ *
+ * Bundled `nano` mode (TF-IDF weights, <1 ms, zero dependencies).
+ * Ask another question with `input.question` (see `manifest.questions`).
+ */
+import {
+	predict,
+	type ClassifyOutput,
+	type ModelWeights,
+	type PluginManifest,
+	type SabakiInput,
+	type SabakiPlugin,
+} from "sabaki";
 import manifestData from "./manifest.json" with { type: "json" };
 import weightsData from "./weights.json" with { type: "json" };
 
@@ -8,9 +21,16 @@ const weights = weightsData as ModelWeights;
 const PRIMARY = manifest.primary ?? manifest.questions[0]!;
 
 function classify(input: SabakiInput): ClassifyOutput {
-  const q = input.question && weights.questions[input.question] ? input.question : PRIMARY;
-  const r = predict(input.state, weights, q);
-  return { decision: r.decision, confidence: r.confidence, domain: manifest.domain };
+	const q =
+		input.question && weights.questions[input.question]
+			? input.question
+			: PRIMARY;
+	const r = predict(input.state, weights, q);
+	return {
+		decision: r.decision,
+		confidence: r.confidence,
+		domain: manifest.domain,
+	};
 }
 
 const plugin: SabakiPlugin = { manifest, classify };
