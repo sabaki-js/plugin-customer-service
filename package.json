@@ -1,6 +1,6 @@
 {
 	"name": "@sabaki-js/customer-service",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"license": "MIT",
 	"description": "Sabaki plugin \u2014 decisions typ\u00e9es pour le domaine customer_service.",
 	"repository": {
