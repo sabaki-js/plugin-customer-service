@@ -1,0 +1,30 @@
+{
+ "name": "@sabaki-js/customer-service",
+ "domain": "customer_service",
+ "version": "0.1.0",
+ "questions": [
+  "category"
+ ],
+ "keywords": [
+  "text",
+  "role",
+  "customer",
+  "amount",
+  "seats",
+  "tier",
+  "lifetime",
+  "value",
+  "tenure",
+  "thread",
+  "account",
+  "your",
+  "need",
+  "months",
+  "tickets",
+  "orders",
+  "please",
+  "settled",
+  "agent",
+  "plan"
+ ]
+}
