@@ -5,7 +5,7 @@ import weightsData from "./weights.json" with { type: "json" };
 const manifest = manifestData as PluginManifest;
 const weights = weightsData as ModelWeights;
 /** Question principale = première du manifest (précisions mesurées : voir REPORT). */
-const PRIMARY = manifest.questions[0]!;
+const PRIMARY = manifest.primary ?? manifest.questions[0]!;
 
 function classify(input: SabakiInput): ClassifyOutput {
   const q = input.question && weights.questions[input.question] ? input.question : PRIMARY;
