@@ -31,5 +31,9 @@
   "agent",
   "plan"
  ],
- "primary": "category"
+ "primary": "category",
+ "modes": {
+  "nano": "poids TF-IDF embarqu\u00e9s (weights.json)",
+  "mini": "ONNX minilaya via loadMiniClassifier() \u2014 mod\u00e8le: fox3000foxy/sabaki minilaya-onnx/customer_service*"
+ }
 }
