@@ -1,13 +1,16 @@
-// PLUGIN TEMPLATE — à copier dans src/index.ts de chaque plugin après `npm install sabaki`.
-import type { ClassifyOutput, SabakiInput, SabakiPlugin } from "sabaki";
+import { predict, type ClassifyOutput, type ModelWeights, type PluginManifest, type SabakiInput, type SabakiPlugin } from "sabaki";
 import manifestData from "./manifest.json" with { type: "json" };
-import type { PluginManifest } from "sabaki";
+import weightsData from "./weights.json" with { type: "json" };
 
 const manifest = manifestData as PluginManifest;
+const weights = weightsData as ModelWeights;
+/** Question principale = première du manifest (précisions mesurées : voir REPORT). */
+const PRIMARY = manifest.questions[0]!;
 
-function classify(_input: SabakiInput): ClassifyOutput {
-  // TODO: remplacer par le classifieur entraîné du domaine.
-  return { decision: manifest.domain, confidence: 0.5, domain: manifest.domain };
+function classify(input: SabakiInput): ClassifyOutput {
+  const q = input.question && weights.questions[input.question] ? input.question : PRIMARY;
+  const r = predict(input.state, weights, q);
+  return { decision: r.decision, confidence: r.confidence, domain: manifest.domain };
 }
 
 const plugin: SabakiPlugin = { manifest, classify };

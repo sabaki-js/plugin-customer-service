@@ -3,7 +3,11 @@
  "domain": "customer_service",
  "version": "0.1.0",
  "questions": [
-  "category"
+  "action",
+  "category",
+  "churn_risk",
+  "needs_human",
+  "urgency"
  ],
  "keywords": [
   "text",
@@ -26,5 +30,6 @@
   "settled",
   "agent",
   "plan"
- ]
+ ],
+ "primary": "category"
 }
