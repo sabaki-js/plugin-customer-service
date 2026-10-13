@@ -1,43 +1,27 @@
+<img src="https://raw.githubusercontent.com/sabaki-js/sabaki/main/assets/logo.svg" width="120" alt="sabaki logo" />
+
 # @sabaki-js/customer-service
 
-Typed decisions over customer-service tickets (category, action, urgency, churn risk, escalation).
+[![npm](https://img.shields.io/npm/v/%40sabaki-js%2Fcustomer-service)](https://www.npmjs.com/package/%40sabaki-js%2Fcustomer-service) [![license](https://img.shields.io/npm/l/%40sabaki-js%2Fcustomer-service)](https://github.com/sabaki-js/plugin-customer-service#readme) [![CI](https://github.com/sabaki-js/plugin-customer-service/actions/workflows/test-battery.yml/badge.svg)](https://github.com/sabaki-js/plugin-customer-service/actions)
 
-A [sabaki](https://github.com/sabaki-js/sabaki) plugin. Router keywords included:
-register it and `Sabaki.decide()` routes matching states here automatically.
+Customer-service ticket decisions.
 
-## Install
-
-```sh
-npm install @sabaki-js/customer-service sabaki
-```
-
-Zero runtime dependencies (bundled TF-IDF weights, 548 Ko).
+Questions: `category` (0.900), `needs_human` (0.72), `urgency` (0.64), `action` (0.57), `churn_risk` (0.60). Weights: 548 KB, zero deps.
 
 ## Usage
 
 ```ts
 import { Sabaki } from "sabaki";
-import mail from "@sabaki-js/customer-service";
+import plugin from "@sabaki-js/customer-service";
 
-const sabaki = new Sabaki();
-sabaki.register(mail.default ?? mail);
-const r = sabaki.decide({ state: "Votre facture mobile est disponible", question: "category" });
+const sabaki = new Sabaki().register(plugin.default ?? plugin);
+const r = sabaki.decide({ state: "..." });
 // { domain: "customer_service", decision: ..., confidence: ..., plugin: "@sabaki-js/customer-service" }
 ```
 
-Ask another question with `input.question` (any of the list below).
-Note: Mini (`mini.ts`): `loadMiniClassifier(modelDir)` with minilaya ONNX weights (see `sabaki-models` release).
+Ask another question with `input.question`.
 
-## Questions (measured on held-out test sets)
-
-- `category` — accuracy **0.900** (account, billing, delivery, refund, technical)
-- `needs_human` — accuracy **0.720** (true/false)
-- `urgency` — accuracy **0.640** (0-3)
-- `action` — accuracy **0.570** (4 actions)
-- `churn_risk` — accuracy **0.600** (0-3)
-
-Accuracies are honest test-split numbers, not marketing. See `sabaki` for the
-`nano` / `mini` modes and the benchmark methodology.
+Part of [sabaki](https://github.com/sabaki-js/sabaki) — see the [GUIDE](https://github.com/sabaki-js/sabaki/blob/main/GUIDE.md).
 
 ## License
 
