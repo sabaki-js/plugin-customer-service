@@ -1,5 +1,5 @@
 /**
- * @sabaki-js/customer-service — sabaki plugin for the `customer_service` domain.
+ * @sabaki-js/customer-service - sabaki plugin for the `customer_service` domain.
  *
  * Bundled `nano` mode (TF-IDF weights, <1 ms, zero dependencies).
  * Ask another question with `input.question` (see `manifest.questions`).
