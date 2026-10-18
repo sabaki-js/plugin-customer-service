@@ -1,0 +1,130 @@
+{
+ "customer_service": {
+  "action": {
+   "T": 1.35,
+   "ece_avant": 0.155,
+   "ece_apres": 0.151,
+   "acc": 0.51
+  },
+  "category": {
+   "T": 0.5,
+   "ece_avant": 0.163,
+   "ece_apres": 0.057,
+   "acc": 0.87
+  },
+  "churn_risk": {
+   "T": 0.95,
+   "ece_avant": 0.078,
+   "ece_apres": 0.083,
+   "acc": 0.59
+  },
+  "needs_human": {
+   "T": 1.95,
+   "ece_avant": 0.139,
+   "ece_apres": 0.074,
+   "acc": 0.69
+  },
+  "urgency": {
+   "T": 0.7,
+   "ece_avant": 0.112,
+   "ece_apres": 0.1,
+   "acc": 0.64
+  }
+ },
+ "invoice_processing": {
+  "discrepancy_severity": {
+   "T": 0.95,
+   "ece_avant": 0.056,
+   "ece_apres": 0.067,
+   "acc": 0.51
+  },
+  "disposition": {
+   "T": 1.1,
+   "ece_avant": 0.103,
+   "ece_apres": 0.095,
+   "acc": 0.54
+  },
+  "duplicate": {
+   "T": 1.15,
+   "ece_avant": 0.062,
+   "ece_apres": 0.008,
+   "acc": 0.89
+  },
+  "matches_order": {
+   "T": 1.15,
+   "ece_avant": 0.17,
+   "ece_apres": 0.146,
+   "acc": 0.67
+  },
+  "urgency": {
+   "T": 1.05,
+   "ece_avant": 0.134,
+   "ece_apres": 0.112,
+   "acc": 0.58
+  }
+ },
+ "security_incidents": {
+  "credential_compromise": {
+   "T": 1.15,
+   "ece_avant": 0.071,
+   "ece_apres": 0.069,
+   "acc": 0.74
+  },
+  "disposition": {
+   "T": 1.0,
+   "ece_avant": 0.058,
+   "ece_apres": 0.058,
+   "acc": 0.76
+  },
+  "severity": {
+   "T": 0.7,
+   "ece_avant": 0.109,
+   "ece_apres": 0.09,
+   "acc": 0.59
+  },
+  "true_positive": {
+   "T": 0.95,
+   "ece_avant": 0.075,
+   "ece_apres": 0.061,
+   "acc": 0.83
+  },
+  "urgency": {
+   "T": 1.15,
+   "ece_avant": 0.126,
+   "ece_apres": 0.086,
+   "acc": 0.57
+  }
+ },
+ "agent_trace_observability": {
+  "action": {
+   "T": 1.05,
+   "ece_avant": 0.12,
+   "ece_apres": 0.103,
+   "acc": 0.57
+  },
+  "needs_review": {
+   "T": 0.95,
+   "ece_avant": 0.053,
+   "ece_apres": 0.044,
+   "acc": 0.83
+  },
+  "outcome": {
+   "T": 1.0,
+   "ece_avant": 0.13,
+   "ece_apres": 0.13,
+   "acc": 0.54
+  },
+  "risk": {
+   "T": 0.8,
+   "ece_avant": 0.093,
+   "ece_apres": 0.094,
+   "acc": 0.71
+  },
+  "urgency": {
+   "T": 0.8,
+   "ece_avant": 0.077,
+   "ece_apres": 0.05,
+   "acc": 0.67
+  }
+ }
+}

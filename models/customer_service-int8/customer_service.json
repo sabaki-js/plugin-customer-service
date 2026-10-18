@@ -1,0 +1,1 @@
+{"questions": ["action", "category", "churn_risk", "needs_human", "urgency"], "classes": {"action": ["answer_directly", "escalate_to_human", "execute_refund", "request_information"], "category": ["account", "billing", "delivery", "refund", "technical"], "churn_risk": ["0", "1", "2", "3"], "needs_human": ["false", "true"], "urgency": ["0", "1", "2", "3"]}}
